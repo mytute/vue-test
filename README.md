@@ -1,45 +1,29 @@
-# 2 Hello World 
+# 3 Project Structure    
 
-### Four ways to add Vue    
+> package.json   
+dependencis and the scripts required for the project
 
-1. CDN Package    
+> package-lock.json    
+this file simply ensure consistent installation of your dependencis.    
 
-```js  
-<script src="https://unpkg.com/vue@next"></script>
-```
+> babel.config.js    
+babel configuration file. babel is tool which transfroms modern javascript features being used in development code in to older syntax that is more cross browser compatible in production code. 
 
-2. npm    
-```bash  
-$ npm install vue@next
-```
-Preferred approach over CDN when building large scale applications with Vue.    
+> node_modules    
+folder in which all the dependencis are installed 
 
-3. Vue CLI    
+> public folder    
+contains static assets that are publish when you want to go live with your application.  
 
-Vue provides an offical CLI for quickly scaffolding single page applications.   
-```bash  
-$ npm install -g @vue/cli   
-$ vue create <project-name>
-```
+> public>index.html    
+this is the only html file you'r going to have in your application you are building single page application and you are not going to add any code body tag in this file.    
 
-4. Vite    
-An opinionated web dev build tool that serves your code via native ES Module imports.     
-Your code is served at a lightning fast speed and you get nearly instant hot module replacement.     
-```bash  
-$ npm init vite-app <project-name>
-```
+> src folder    
+main.js : starting point we specify root component and dom element which will be controlled by vue. 
+App.vue : file where you specify html css and javascript correspoiding to a portion of the UI you see in the browser.   
 
-### Create first project     
+> assets folder   
+folder can use to store images, svg etc 
 
-```bash  
-$ yarn global add @vue/cli
-$ vue --version   
-$ vue create hello-world  # select vue version 3
-```
-
-### Run first project    
-
-```bash 
-$ cd hello-world
-$ npm run serve
-```
+### controll flow    
+when you are run "npm serve" it serve "index.html" file in the browser. It contain root dom node and it entered the main.js 
