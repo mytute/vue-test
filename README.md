@@ -38,8 +38,8 @@ export default {
 
 3. show how to bind data proterty using directives.   
 directive nothing but special html attribute and in view each directive has a v-prefix.    
-directive for bindding text : "v-text"(rarely used)
-here "div" tag empty and "v-text" replaces the data property value as inner text of the html element.
+directive for bindding text : "v-text"(rarely used)    
+here "div" tag empty and "v-text" replaces the data property value as inner text of the html element.    
 show when we use "v-text" we can't add value to the tag and it show error.
 
 ```vue 
