@@ -1,51 +1,45 @@
-# vue-test version 3
+# 2 Hello World 
 
-### What Vue is ?    
-A popular JavaScript framwork for building user interfaces.    
+### Four ways to add Vue    
 
-The core Vue library is focused on doing on thing and doing on thing really well whicj is building user interfaces.   
+1. CDN Package    
 
-Vue dose not foucs on the other aspects of your application like routing or HTTP requests.    
+```js  
+<script src="https://unpkg.com/vue@next"></script>
+```
 
+2. npm    
+```bash  
+$ npm install vue@next
+```
+Preferred approach over CDN when building large scale applications with Vue.    
 
-Vue has a rich eco system of other powerfull libraries that you can integrate.    
+3. Vue CLI    
 
-Vue npm package for complex state management, Vue router for routing, Vuetify for UI elements and a lot more.    
+Vue provides an offical CLI for quickly scaffolding single page applications.   
+```bash  
+$ npm install -g @vue/cli   
+$ vue create <project-name>
+```
 
-### Why Vuejs ?
+4. Vite    
+An opinionated web dev build tool that serves your code via native ES Module imports.     
+Your code is served at a lightning fast speed and you get nearly instant hot module replacement.     
+```bash  
+$ npm init vite-app <project-name>
+```
 
-The thrid most starred Github repository in the world.    
+### Create first project     
 
-Thousands of developers around the world enjoy working with vue.    
+```bash  
+$ yarn global add @vue/cli
+$ vue --version   
+$ vue create hello-world  # select vue version 3
+```
 
-You are going to find solutions to most of the problems that you face.    
+### Run first project    
 
-### Vue technical aspect   
-
-1. Vue is approachable.   
-
-Familiarity with HTML, CSS and JavaScript.   
-
-Add a script tag with reference to vue.js and start building Vue applications.   
-
-Vue Devtools which gives insight into your apps.    
-
-Vue CLI with which you can quickly scaffold and manage projects.   
-
-Vue also has a component based architecture.    
-
-Vue is declarative.   
-
-Vue will make it painless for you to create complex user interfaces by abstracting away the difficult parts.    
-
-2. Vue is versatile.    
-
-Create powerful single page applications from scrach using build tools like webpack.    
-
-Incoporate Vue into your existing legacy projects and make progressive enhancement.    
-
-3. Vue is performant.    
-
-Vue measures just 20KB minified and gzipped at runtime.    
-
-Better performance because of virtual DOM.    
+```bash 
+$ cd hello-world
+$ npm run serve
+```
