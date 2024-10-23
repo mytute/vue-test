@@ -1,37 +1,40 @@
-# 3 Project Structure    
+# 4 single file components    
 
-> package.json   
+### vue file    
+A *.view file is a custom file format that uses HTML like syntax to describe a portion of the UI.    
 
-dependencis and the scripts required for the project
+Each *.vue file consists of three types of top-level language blocks   
+1. <template></template>    
+2. <script></script>
+3. <style></style>
 
-> package-lock.json    
+The template block is like the HTML of your UI.    
+The script block is where the logic and functionality of your app can be maintained.    
+The CSS block is where you specify the styles related to the mark up in the template block.    
 
-this file simply ensure consistent installation of your dependencis.    
+In vue *.vue file is called a single file component(SFC).    
 
-> babel.config.js    
+1. delete .vue file inside the component folder and remove related code insdie App.vue file.    
 
-babel configuration file. babel is tool which transfroms modern javascript features being used in development code in to older syntax that is more cross browser compatible in production code. 
+```vue 
+<template>
+  <p>Samadhi</p>
+</template>
 
-> node_modules    
+<script>
 
-folder in which all the dependencis are installed 
+export default {
+  name: 'App',
+  components: {
+  }
+  data (){
+      return {
+          name: "Samadhi Laksahan"
+      }
+  }
+}
+</script>
 
-> public folder    
-
-contains static assets that are publish when you want to go live with your application.  
-
-> public>index.html    
-
-this is the only html file you'r going to have in your application you are building single page application and you are not going to add any code body tag in this file.    
-
-> src folder    
-
-main.js : starting point we specify root component and dom element which will be controlled by vue. 
-App.vue : file where you specify html css and javascript correspoiding to a portion of the UI you see in the browser.   
-
-> assets folder   
-
-folder can use to store images, svg etc 
-
-### controll flow    
-when you are run "npm serve" it serve "index.html" file in the browser. It contain root dom node and it entered the main.js 
+<style>
+</style>
+```
