@@ -1,24 +1,20 @@
-# 4 single file components    
+# 5 Binding Text    
 
-### vue file    
-A *.view file is a custom file format that uses HTML like syntax to describe a portion of the UI.    
+### Bind script to the template       
 
-Each *.vue file consists of three types of top-level language blocks   
-1. <template></template>    
-2. <script></script>
-3. <style></style>
+1. to App.vue file add static text into "template" with "div" tag and see the code.
+```vue  
+<template>
+  <div>Samadhi Laksahan</div>
+</template>
+```
 
-The template block is like the HTML of your UI.    
-The script block is where the logic and functionality of your app can be maintained.    
-The CSS block is where you specify the styles related to the mark up in the template block.    
-
-In vue *.vue file is called a single file component(SFC).    
-
-1. delete .vue file inside the component folder and remove related code insdie App.vue file.    
+2. to make dynamic add some text from the script block and bind the data to the html block. for that we use mustache syntax(pair of curly braces) in vue. 
 
 ```vue 
 <template>
-  <p>Samadhi</p>
+  <div>Samadhi Laksahan</div>
+  <div>{{greet}} {{name}}</div>
 </template>
 
 <script>
@@ -26,11 +22,47 @@ In vue *.vue file is called a single file component(SFC).
 export default {
   name: 'App',
   components: {
+  },
+  data() {
+    return {
+      name: "Piyasiri",
+      greet: "Hello"
+    }
   }
-  data (){
-      return {
-          name: "Samadhi Laksahan"
-      }
+}
+</script>
+
+<style>
+</style>
+```
+
+3. show how to bind data proterty using directives.   
+directive nothing but special html attribute and in view each directive has a v-prefix.    
+directive for bindding text : "v-text"(rarely used)
+here "div" tag empty and "v-text" replaces the data property value as inner text of the html element.
+show when we use "v-text" we can't add value to the tag and it show error.
+
+```vue 
+<template>
+  <div>Samadhi Laksahan</div>
+  <div>{{greet}} {{name}}</div>
+  <div v-text="channel"></div>
+  <!-- <div v-text="channel">Hello</div>  show error-->
+
+</template>
+
+<script>
+
+export default {
+  name: 'App',
+  components: {
+  },
+  data() {
+    return {
+      name: "Piyasiri",
+      greet: "hello",
+      channel: "code"
+    }
   }
 }
 </script>
